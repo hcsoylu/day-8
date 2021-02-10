@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task list</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* EXERCISE 2:  
+       Create a CSS class for the task list with a diverse background
+       Create a CSS class for the task list item with a border, a bold text and a bigger font size
+       Style every button of the page to be bigger
+    */
+      body {
+        margin: auto 250px;
+        font-family: "Roboto", sans-serif;
+      }
+      input[type="button"] {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      ul li {
+        border: 5px solid #4caf50;
+        border-radius: 10px;
+        width: 500px;
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #4caf50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to your personal Task List!</h1>
+    <br />
+
+    <span
+      >You can add any task you like by writing it in the specified field and
+      then press "Add new task"</span
+    ><br /><br />
+
+    <input type="text" id="newTask" />
+    <input id="add" type="button" value="Add new Task" />
+
+    <!-- EXERCISE 3
+        Create a button "Remove Last Task" to trigger the method "removeLast"
+        -->
+    <input id="removelast" type="button" value="Remove Last Task" />
+
+    <!-- EXERCISE 4
+        Create a button "Remove First Task" to trigger the method "removeFirst"
+        -->
+    <input id="removefirst" type="button" value="Remove First Task" />
+
+    <ul id="myTaskList"></ul>
+
+    <hr />
+
+    <input type="color" placeholder="Color" id="colorPicker" />
+    <input
+      type="button"
+      value="Change task background"
+      onclick="changeTaskBackgroundColor()"
+    />
+
+    <hr />
+
+    <input type="button" value="Sort" onclick="bubblesort()" />
+
+    <script src="day8.js"></script>
+  </body>
+</html>
